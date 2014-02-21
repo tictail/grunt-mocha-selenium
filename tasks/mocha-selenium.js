@@ -109,7 +109,7 @@ module.exports = function(grunt) {
       grunt.log.debug(' > \x1b[33m%s\x1b[0m: %s', meth, path, data || '');
     });
 
-    browser.init(options, function(err){
+    browser.init(options.capabilities || options, function(err){
       if(err){
         grunt.fail.fatal(err);
         return;
